@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="./main.js"></script>
+    <link rel="stylesheet" href="./style.css">
+    <title>Maps and Sets</title>
+</head>
+<body>
+    <h1 class="mainheading">Maps and Sets  </h1>
+    <br>
+
+
+    <div class="boxes">
+        <h2>Ques.1 You are given a string (STR) of length N, consisting of only the lower case English alphabet.
+            Your task is to remove all the duplicate occurrences of characters in the string. </h2>
+            <h4>Input: abcadeecfb</h4>
+           <h4>Output: abcdef</h4>
+        <pre class="code">
+            let myStr ='abcadeecfb';
+            myStrArr= myStr.split('');
+            
+            for(let i = 0 ; i < myStrArr.length ; i++){
+                for(let j =i+1 ; j < myStrArr.length ; j++){
+                    if(myStrArr[i] === myStrArr[j]){
+                      myStrArr.splice(j, 1);
+                    }
+                }    
+            }
+            myStr = myStrArr.join("");
+            
+            console.log('After Deletion : ',myStr);
+        </pre>
+    </div>
+
+    <br>
+    <hr>
+    <br>
+
+    <div class="boxes">
+        <h2>Que2.</h2>
+        <h3>Ans.</h3>
+        <pre>
+            console.log("Question 2 : ");
+
+let myStr2 ='abcadeecfb';
+
+for(let i = 0 ; i < myStr2.length ; i++){
+    count = 1;
+    for(let j = i + 1 ; j < myStr2.length ; j++){
+
+        if(myStr2[i] === myStr2[j]){
+            count = count + 1;
+            console.log(`${myStr2[i]} = ${count}`);
+        }
+        else if (myStr2.indexOf(i) === myStr2.lastIndexOf(i)){
+            console.log(`${myStr2[i]} = ${count}`);
+        }
+        
+
+    }
+}
+        </pre>
+    </div>
+
+
+    
+
+    
+</body>
+</html>
